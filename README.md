@@ -80,8 +80,12 @@ unset GOOGLE_TTS_API_KEY
 
 MIT License. Feel free to use and modify as needed.
 
+## Repository
+
+GitHub: [github.com/lukaskaplan/asterisk-agi-google-tts](https://github.com/lukaskaplan/asterisk-agi-google-tts)
+
 ## Author
 
 - Lukas Kaplan
-- GitHub: https://github.com/lukaskaplan/asterisk-agi-google-tts
+- GitHub: [lukaskaplan](https://github.com/lukaskaplan)
 

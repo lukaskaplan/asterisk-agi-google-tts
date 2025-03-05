@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 
 """
-Google Text-to-Speech API AGI script for Asterisk (WAV format, 8kHz).
+Google Text-to-Speech API AGI script for Asterisk.
 Author: Lukas Kaplan
 GitHub: https://github.com/lukaskaplan/asterisk-agi-google-tts
 License: MIT
+
+This script converts text to speech using Google TTS and saves the output as a WAV file (8kHz, mono PCM).
+It is optimized for use as an AGI script in Asterisk.
 
 Usage (in Asterisk dialplan):
     same => n,AGI(google-tts.py,"Text to synthesize","/path/to/output.wav")
