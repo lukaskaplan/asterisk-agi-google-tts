@@ -1,5 +1,7 @@
 # asterisk-agi-google-tts
 
+[![Lint](https://github.com/lukaskaplan/asterisk-agi-google-tts/actions/workflows/lint.yml/badge.svg)](https://github.com/lukaskaplan/asterisk-agi-google-tts/actions/workflows/lint.yml)
+
 Google Text-to-Speech (TTS) AGI Script for Asterisk
 
 This script uses Google Cloud Text-to-Speech API to convert text into speech and save it as a WAV file (8kHz, LINEAR16), making it suitable for use with Asterisk AGI.
