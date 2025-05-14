@@ -47,7 +47,7 @@ DEFAULT_API_KEY = "your-google-api-key"
 ### 2️⃣ Run the script manually
 
 ```sh
-python google-tts.py "Hello, this is a test" /path/to/output.wav
+python google_tts.py "Hello, this is a test" /path/to/output.wav
 ```
 
 ### 3️⃣ Use as an Asterisk AGI Script
@@ -55,15 +55,15 @@ python google-tts.py "Hello, this is a test" /path/to/output.wav
 #### Copy the script to Asterisk AGI directory:
 
 ```sh
-cp google-tts.py /var/lib/asterisk/agi-bin/google-tts.py
-chmod +x /var/lib/asterisk/agi-bin/google-tts.py
+cp google_tts.py /var/lib/asterisk/agi-bin/google_tts.py
+chmod +x /var/lib/asterisk/agi-bin/google_tts.py
 ```
 
 #### Example Asterisk Dialplan (extensions.conf):
 
 ```asterisk
 exten => 1234,1,Answer()
-same  => n,AGI(google-tts.py,"Hello, welcome to our system","/var/lib/asterisk/sounds/custom/greeting.wav")
+same  => n,AGI(google_tts.py,"Hello, welcome to our system","/var/lib/asterisk/sounds/custom/greeting.wav")
 same  => n,Playback(custom/greeting)
 same  => n,Hangup()
 ```

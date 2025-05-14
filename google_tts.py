@@ -6,21 +6,23 @@ Author: Lukas Kaplan
 GitHub: https://github.com/lukaskaplan/asterisk-agi-google-tts
 License: MIT
 
-This script converts text to speech using Google TTS and saves the output as a WAV file (8kHz, mono PCM).
-It is optimized for use as an AGI script in Asterisk.
+This script converts text to speech using Google TTS and saves the output 
+as a WAV file (8kHz, mono PCM). It is optimized for use as an AGI script in 
+Asterisk.
 
 Usage (in Asterisk dialplan):
     same => n,AGI(google-tts.py,"Text to synthesize","/path/to/output.wav")
 
 Requirements:
     - requests (pip install requests)
-    - A valid Google TTS API key (set as GOOGLE_TTS_API_KEY env variable or directly in the script)
+    - A valid Google TTS API key (set as GOOGLE_TTS_API_KEY env variable 
+      or directly in the script)
 """
 
-import requests
 import base64
 import sys
 import os
+import requests
 
 # Configuration
 DEFAULT_API_KEY = None  # Set your api key here if needed
@@ -60,7 +62,7 @@ def synthesize_speech(text: str, output_file: str):
             sys.exit(0)  # Success
         else:
             sys.exit(1)  # API request failed
-    except Exception:
+    except requests.exceptions.RequestException:
         sys.exit(1)  # Handle network issues
 
 def main():
