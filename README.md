@@ -25,7 +25,7 @@ This script uses Google Cloud Text-to-Speech API to convert text into speech and
 ### Install dependencies
 
 ```sh
-pip install requests
+pip install -r requirements.txt
 ```
 
 ## Usage
